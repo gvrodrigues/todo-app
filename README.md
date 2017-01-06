@@ -2,10 +2,10 @@
 
  Lista de tarefas com múltiplas etapas e controle de transição das mesmas.
  
- # Installing
+# Installing
  
  npm install
  
- # Run
+# Run
  
  npm start
