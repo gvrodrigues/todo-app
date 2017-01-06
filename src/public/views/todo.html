@@ -1,0 +1,24 @@
+<section id="todoapp">
+	<header id="header">
+		<h4 class="text-center">Aplicação 2 - Todo List</h4>
+		<form id="todo-form" ng-submit="addTodo()">
+			<input class="text-center" id="new-todo" placeholder="Olá, qual a sua próxima tarefa?" ng-model="newTodo" autocomplete="off" autofocus>
+		</form>
+	</header>
+	<section ng-show="todos.length" ng-cloak>
+		<ul id="todo-list">
+			<li ng-repeat="todo in todos | orderBy:['-checked','done']:false track by $index">
+				<div class="view">					
+					<label ng-dblclick="editTodo(todo)" class="done-{{todo.done}}">{{ todo.text }} </label>
+					<input class="check" type="checkbox" ng-model="todo.done" ng-change="todoCompleted(todo, $index)" />	
+					<button class="delete" ng-click=removeTodo($index)></button>
+					<div class="info-label">
+						<span ng-show="!todo.done" class="label label-warning">Pendente</span>
+						<span ng-show="todo.done" class="label label-success">Concluída</span>
+						<span>Tarefa criada em: {{ todo.createdAt | date: 'dd/MM/yyyy' }}</span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>	
+</section>

@@ -1,0 +1,215 @@
+@font-face {
+	font-family: 'Material Icons'; 
+	src: url('https://fonts.googleapis.com/icon?family=Material+Icons'); 
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #9C27B0;
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	min-width: 250px;
+	max-width: 600px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-weight: 300;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+#todoapp {
+	background: #fff;
+	margin: 130px 0 40px 0;
+	position: relative;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2),
+	0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+#todoapp input::-webkit-input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #BDBDBD;
+}
+
+#todoapp input::-moz-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #BDBDBD;
+}
+
+#todoapp input::input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #BDBDBD;
+}
+
+#header h4 {
+	position: absolute;
+	margin-top: -100px;
+	width: 100%;
+	font-size: 40px;
+	font-weight: 100;
+	text-align: center;
+	color: #F3E5F5;
+}
+
+#new-todo,
+
+.edit {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	font-size: 24px;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+	color: inherit;
+	padding: 6px;
+	border: 1px solid #999;
+	box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+#new-todo {
+	padding: 15px;
+	border: none;
+	background: rgba(0, 0, 0, 0.003);
+	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+	color: #9C27B0;
+}
+
+#todo-list li .check:after {	
+	font-family: 'Material Icons';
+	content: 'check';
+	font-size: 24px;
+}
+
+#todo-list li .check:checked:after {	
+	font-family: 'Material Icons';
+	content: 'undo';
+	font-size: 24px;
+}
+
+#toggle-all:checked:before {
+	color: #737373;
+}
+
+#todo-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#todo-list li {
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #ededed;
+}
+
+#todo-list li:last-child {
+	border-bottom: none;
+}
+
+/* Styling icon to check todo */
+
+#todo-list li .check {
+	display: none;
+	float: right;
+	position: relative;
+	margin-right: 20px;
+	border: none; 
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+#todo-list li:hover .check {
+	display: block;
+	cursor: pointer;
+}
+
+#todo-list li .check:hover {
+	color: #00C853;
+}
+
+/* Styling icon to delete todo */
+
+#todo-list li .delete {
+	display: none;
+	float: right;
+	position: relative;
+	margin-right: 20px;
+	border: none; 
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+#todo-list li:hover .delete {
+	display: block;
+	cursor: pointer;
+	font-family: 'Material Icons';
+	content: 'delete';
+	font-size: 24px;
+}
+
+#todo-list li .delete:hover {
+	color: #D50000;
+}
+
+#todo-list li .delete:after {
+	font-family: 'Material Icons';
+	content: 'delete';
+	font-size: 24px;
+}
+
+
+#todo-list li label {
+	white-space: pre-line;
+	word-break: break-all;
+	margin: 20px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
+	cursor: pointer;
+	padding: 15px;
+}
+
+label {
+	color: #9C27B0;
+}
+
+.info-label {
+	color: #9E9E9E;
+	font-size: 14px;
+	margin-left: 20px;
+	padding: 15px;
+}
+
+.done-true {
+	text-decoration: line-through;
+	color: grey;
+}
+
